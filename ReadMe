@@ -1,0 +1,6 @@
+
+jsoup as web crawler & scrap
+
+- implemented main program with argument
+- the target URL could pass as argument
+- support SSL website via bypassing certification
