@@ -123,7 +123,12 @@ public class JsoupApplication {
 					.method(Connection.Method.GET)
 					.ignoreContentType(true);
 
-			Document doc2 = conn2.get();
+			Document doc2=null;
+			try {
+				doc2 = conn2.get();
+			} catch(Exception e){
+				continue;
+			}
 
 			Elements links3 = doc2.select("a[href]");
 			Elements media3 = doc2.select("[src]");
